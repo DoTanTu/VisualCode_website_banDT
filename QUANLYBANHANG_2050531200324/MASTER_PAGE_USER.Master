@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MASTER_PAGE_USER.master.cs" Inherits="QUANLYBANHANG_2050531200324.MASTER_PAGE_USER" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 471px;
+        }
+        .auto-style3 {
+            width: 241px;
+            height: 338px;
+        }
+        .auto-style4 {
+            height: 338px;
+        }
+        .auto-style5 {
+            height: 338px;
+            width: 948px;
+        }
+        .auto-style6 {
+            width: 440px;
+            height: 114px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1" border="1">
+            <tr>
+                <td colspan="3">
+                    <img alt="" class="auto-style6" src="IMAGES/BANNER.jfif" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style3" style="vertical-align: top">
+                    <asp:Repeater ID="Repeater1" runat="server">
+                        <ItemTemplate>
+                            <a href="pageDANHSACHSANPHAM.aspx?MADANHMUC=<%# Eval("MADANHMUC")%>"> <%# Eval("TENDANHMUC")%></a>
+                            <br />
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </td>
+                <td class="auto-style5" style="vertical-align: top">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+                </td>
+                <td class="auto-style4" style="vertical-align: top"></td>
+            </tr>
+            <tr>
+                <td colspan="3">FOOTER</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
